@@ -15,6 +15,10 @@ public class Sherlock {
         this.time = 0;
     }
 
+
+    /**
+     * Поиск пропавшего элемента в массиве по методу_1
+     */
     public void helpMeToFindLost(int[] array) {
         this.counter = 0;
         this.startTime = System.currentTimeMillis();
@@ -49,6 +53,9 @@ public class Sherlock {
         this.showResult();
     }
 
+    /**
+     * Поиск пропавшего элемента по методу_2 (просто для сравнения результатов с методом_1)
+     */
     public void helpMeToFindLost2(int[] array) {
         this.counter = 0;
         this.startTime = System.currentTimeMillis();
@@ -63,6 +70,11 @@ public class Sherlock {
         this.showResult();
     }
 
+    /**
+     * Генерация массива от 1 до range с шагом +1 и одним пропущенным элементом
+     *
+     * @param range - последний элемент массива
+     */
     public int[] giveMeArray(int range) {
         int[] array = new int[range - 1];
         int lostIndex;
@@ -76,6 +88,9 @@ public class Sherlock {
         return array;
     }
 
+    /**
+     * Вывод в консоль результатов поиска пропавшего элемента
+     */
     public void showResult() {
         System.out.println((this.lostDigit == this.foundDigit) ? "Пропавшее число найдено!" : "------Пропавшее число НЕ найдено!------");
         System.out.println("Потерянное число: " + this.lostDigit);
